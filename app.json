@@ -1,0 +1,34 @@
+{
+    "name": "razorz",
+    "description": "razorz",
+    "keywords": [
+        "stream",
+        "extension",
+        "review"
+    ],
+    "repository": "https://github.com/razorz",
+    "env": {
+        "THE_URL": {
+            "description": "THE_URL",
+            "value": "0",
+            "required": false
+        },
+        "THE_WORKER": {
+            "description": "THE_WORKER",
+            "value": "0",
+            "required": false
+        },
+        "THE_STATUS": {
+            "description": "STATUS",
+            "value": "0",
+            "required": false
+        }
+    },
+    "stack": "container",
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
