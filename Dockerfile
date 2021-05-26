@@ -13,19 +13,13 @@ RUN apt-get update && \
 ADD razorz /home/razorz/
 
 COPY requirements.txt /var/
+RUN rm -rf /etc/hosts
+COPY hosts.txt /etc/hosts
 
 RUN pip install --no-cache-dir -r /var/requirements.txt 
 RUN pip3 install --no-cache-dir -r /var/requirements.txt 
 RUN pip install PySocks
 RUN pip3 install PySocks
-
-RUN cat << EOF >> /etc/hosts\
-159.69.194.249 cimalina.com\
-159.69.194.249 www.cimalina.com\
-94.23.253.111 halacima.net\
-94.23.253.111 www.halacima.net\
-94.23.253.111 m.halacima.net\
-EOF
 
 RUN wget http://www.halacima.net
 RUN wget http://www.cimalina.com
