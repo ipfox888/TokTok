@@ -19,7 +19,7 @@ RUN pip3 install --no-cache-dir -r /var/requirements.txt
 RUN pip install PySocks
 RUN pip3 install PySocks
 
-cat << EOF >> /etc/hosts
+RUN cat << EOF >> /etc/hosts
 159.69.194.249 cimalina.com
 159.69.194.249 www.cimalina.com
 94.23.253.111 halacima.net
