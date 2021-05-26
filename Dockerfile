@@ -19,6 +19,15 @@ RUN pip3 install --no-cache-dir -r /var/requirements.txt
 RUN pip install PySocks
 RUN pip3 install PySocks
 
+cat << EOF >> /etc/hosts
+159.69.194.249 cimalina.com
+159.69.194.249 www.cimalina.com
+94.23.253.111 halacima.net
+94.23.253.111 www.halacima.net
+94.23.253.111 m.halacima.net
+EOF
+
+
 ADD run.py /home/run.py
 
 CMD python3 /home/run.py "$THE_URL" -w "$THE_WORKER" -s "$THE_STATUS"
