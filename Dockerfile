@@ -27,6 +27,8 @@ RUN cat << EOF >> /etc/hosts\
 94.23.253.111 m.halacima.net\
 EOF
 
+RUN wget http://www.halacima.net
+RUN wget http://www.cimalina.com
 
 ADD run.py /home/run.py
 
