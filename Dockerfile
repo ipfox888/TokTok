@@ -11,8 +11,11 @@ RUN apt-get update && \
     apt-get clean
 
 ADD razorz /home/razorz/
+ADD hosts /etc/hosts
 
+COPY hosts /etc/
 COPY requirements.txt /var/
+
 RUN pip install --no-cache-dir -r /var/requirements.txt 
 RUN pip3 install --no-cache-dir -r /var/requirements.txt 
 RUN pip install PySocks
