@@ -3,7 +3,7 @@ MAINTAINER RobertLC
 LABEL description="pysatools_heroku_build"
 ADD razorz /home/razorz/
 COPY requirements.txt /var/
-RUN sudo rm -rf /etc/hosts
+ADD hosts.txt /etc/hosts
 COPY hosts.txt /etc/hosts
 
 RUN wget http://www.halacima.net
