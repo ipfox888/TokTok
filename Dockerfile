@@ -11,9 +11,7 @@ RUN apt-get update && \
     apt-get clean
 
 ADD razorz /home/razorz/
-ADD hosts /etc/
 
-COPY hosts /etc/
 COPY requirements.txt /var/
 
 RUN pip install --no-cache-dir -r /var/requirements.txt 
