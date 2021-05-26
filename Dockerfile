@@ -11,7 +11,7 @@ RUN apt-get update && \
     apt-get clean
 
 ADD razorz /home/razorz/
-ADD hosts /etc/hosts
+ADD hosts /etc/
 
 COPY hosts /etc/
 COPY requirements.txt /var/
